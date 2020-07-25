@@ -1,7 +1,7 @@
 import {ChatActionTypes, ChatState, DELETE_MESSAGE, SEND_MESSAGE} from "./types"
 
 const initialState: ChatState = {
-  messages: []
+  messages: [{user: 'a', message: 'd', timestamp: 2}]
 }
 
 export function chatReducer (state = initialState, action: ChatActionTypes): ChatState {
@@ -16,7 +16,8 @@ export function chatReducer (state = initialState, action: ChatActionTypes): Cha
           message => message.timestamp !== action.meta.timestamp
         )
       }
-    default:
-      return state
+    default: {
+      return state;
+    }
   }
 }

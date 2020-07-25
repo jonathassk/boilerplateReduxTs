@@ -3,7 +3,7 @@ import {SystemActionTypes, SystemState, UPDATE_SESSION} from './types'
 const initialState: SystemState = {
   loggedIn: false,
   session: '',
-  userName: ''
+  userName: 'jonathas'
 }
 
 export function systemReducer (state = initialState, action: SystemActionTypes): SystemState {
